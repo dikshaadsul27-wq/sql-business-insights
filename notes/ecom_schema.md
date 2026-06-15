@@ -247,12 +247,10 @@
 ---
 
 ## Section B — Column Dictionary
-(Paste Block 1 output here)
 
 ```sql
--- Block 1 output
+--
 <table_name> | <column_name> | <data_type> | <is_nullable> | <column_default>
-table_name	column_name	data_type	is_nullable	column_default
 addresses	address_id	bigint	NO	nextval('ecom.addresses_address_id_seq'::regclass)
 addresses	line1	text	YES	
 addresses	line2	text	YES	
@@ -544,5 +542,26 @@ shipping_methods	base_fee	numeric	NO
 
 ...
 
+## Section C — Foreign Keys
 
+
+-- Block 3 output
+<table_name> | <column_name> → <foreign_table>.<foreign_column>
+...
+
+## Section D — Categorical Distributions
+
+sql
+<status> | <n> 	
+delivered	19,779
+shipped	7,715
+paid	3,946
+packed	3,887
+cancelled	2,178
+placed	1,897
+SHIPPED	248
+DELIVERED	200
+Shipped	150
+
+...
 
