@@ -543,13 +543,13 @@ shipping_methods	base_fee	numeric	NO
 
 
 ## Section C — Foreign Keys
-'''
+```sql
 <table_name> | <column_name> → <foreign_table>.<foreign_column>
 ...
 
 ## Section D — Categorical Distributions
 
-'''
+```sql
 <status> | <n> 	
 delivered	19,779
 shipped	7,715
