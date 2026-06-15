@@ -538,20 +538,20 @@ shipping_carriers	carrier_name	text	NO
 shipping_methods	shipping_method_id	bigint	NO	nextval('ecom.shipping_methods_shipping_method_id_seq'::regclass)
 shipping_methods	method_name	text	NO	
 shipping_methods	base_fee	numeric	NO	
-...
+---
 
 
 
 ## Section C — Foreign Keys
 ```sql
----
+
 <table_name> | <column_name> → <foreign_table>.<foreign_column>
-...
+---
 
 ## Section D — Categorical Distributions
 
 ```sql
----
+
 <status> | <n> 	
 delivered	19,779
 shipped	7,715
@@ -562,5 +562,5 @@ placed	1,897
 SHIPPED	248
 DELIVERED	200
 Shipped	150
-...
+---
 
