@@ -2,7 +2,7 @@
 
 ## Section A — Table Inventory
 (Grain, approx row count, purpose for each table)
-[Inventory](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Inventory.xlsx)
+[Inventory](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Inventory.md)
 ### 1.addresses
 - Grain: 
 - Approx row count: 16,000
@@ -248,7 +248,7 @@
 
 ## Section B — Column Dictionary
 
-Row counts:[Row counts](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Row%20counts.xlsx)
+Row counts:[Row counts](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Row%20counts.md)
 
 ## Section C — Foreign Keys
 
@@ -256,8 +256,7 @@ Row counts:[Row counts](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/
 
 ## Section D — Categorical Distributions
 
-Distinct value distributions on every categorical text column (status, payment_method, channel, country): [Distinct Value Distribution](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Distinct%20Value%20Distribution.xlsx)
-
+Distinct value distributions on every categorical text column (status, payment_method, channel, country): [Distinct Value Distribution](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Distinct%20Value%20Distribution.md)
 ## Section E — Empty Table Check
 
 collections → 0 rows
