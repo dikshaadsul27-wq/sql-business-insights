@@ -117,3 +117,25 @@ Overall, SLA breaches are concentrated in EcomExpress fast‑shipping methods, n
 3. Bluedart is acceptable but not best‑in‑class; monitor express/same‑day to ensure late rates don’t creep above 10%.
 Ops focus: reduce long‑tail delays (p90 hitting 8 days for EcomExpress) by tightening SLA enforcement and improving exception handling.
 
+**Q8 — Customer LTV + Bucket Share of Revenue**
+
+*Question :*
+The CRM Lead wants to know: who are our top spenders, and what share of total revenue do they represent?
+
+*Summary of the Output :*
+Customers are grouped into four lifetime value (LTV) buckets:
+₹0–999: Low‑value customers, many in number but contribute only a small share of revenue.
+₹1,000–4,999: Mid‑value customers, larger share than the lowest bucket but still modest overall.
+₹5,000–19,999: High‑value customers, contribute a significant portion of revenue.
+₹20,000+: Top spenders, very small in number but disproportionately large share of revenue.
+
+The bucket share calculation shows that the ₹20,000+ group contributes the majority of revenue, followed by the ₹5,000–19,999 group. The lower buckets together represent a large customer base but only a minority of revenue.
+
+*Interpretation :*      
+Revenue is highly concentrated among a small set of top spenders. While thousands of customers fall into the lower buckets, their combined contribution is overshadowed by a few high‑LTV customers. This indicates strong dependence on a small elite segment, which is both an opportunity (high ROI from retention) and a risk (over‑reliance on a narrow base).
+
+*Actionable Takeaways :*
+1. Protect and retain top spenders (₹20,000+): They are the backbone of revenue. Personalized engagement, loyalty programs, and premium support are critical.
+2. Grow the mid‑tier (₹5,000–19,999): This group has potential to move into the top bucket; targeted upsell and cross‑sell campaigns can lift them.
+3. Diversify revenue sources: Reduce risk by expanding the high‑value base rather than relying too heavily on a small elite.
+
