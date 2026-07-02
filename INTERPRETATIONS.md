@@ -48,3 +48,51 @@ The funnel is healthy once customers add items to cart as most proceed through c
 2. Leverage email and referral channels since they show stronger end‑to‑end conversion, scale these campaigns further.
 3. Investigate direct traffic attribution to ensure sessions are tracked correctly, as current data shows zero conversions.
 4. Since checkout and payment stages are strong, prioritize top‑of‑funnel improvements rather than backend fixes.
+
+**Q5 — Category Health: Purchases → Returns**
+
+*Question :*
+The Category Manager wants to know: which categories generate the most revenue, and which suffer the highest return rates?
+
+*Summary of the Output :*
+Smartwatch: ₹6.22M revenue, 720 units sold, 127 returns, return rate 24.1%.
+Headphones: ₹3.95M revenue, 792 units sold, 143 returns, return rate 24.5%.
+Speakers: ₹3.25M revenue, 638 units sold, 129 returns, return rate 26.7%.
+Shoes: ₹1.62M revenue, 815 units sold, 162 returns, return rate 27.6%.
+Kitchen: ₹1.37M revenue, 745 units sold, 157 returns, return rate 29.3% (highest).
+Accessories: ₹0.68M revenue, 859 units sold, 173 returns, return rate 27.6%.
+Other apparel categories (Jackets, Jeans, Tops) and beauty (Skincare, Haircare, Makeup) all show return rates in the 25–28% range.
+
+*Interpretation :*      
+High‑value electronics (Smartwatches, Headphones, Speakers) generate the most revenue but still face return rates above 24%. Fashion and lifestyle categories (Shoes, Jackets, Accessories) show even higher return rates, often exceeding 27%. Kitchen products are the worst performer, with nearly 1 in 3 units returned. Bedding and Jeans are slightly better, but still above 24%. Overall, no category is below 24% return rate.
+
+*Actionable Takeaways :*
+1. Electronics (Smartwatches, Headphones) are strong revenue drivers, but their return rates need attention, possibly due to product fit, expectations, or technical issues.
+2. Kitchen and Shoes categories are red flags: return rates above 27–29% suggest quality or mismatch problems. These need immediate investigation.
+3. Apparel and beauty categories show consistently high returns (25–28%), indicating sizing, fit, or expectation issues. Consider better product descriptions, sizing guides, or stricter quality checks.
+4. Focus retention and profitability efforts on categories like Smartwatches and Headphones, where revenue is high, while aggressively reducing returns in categories like Kitchen and Shoes.
+
+**Q6 — Payment Failure Analysis (Method × Top Error Code)**
+
+*Question :*
+The Payments PM wants to know: which payment methods fail most, and what’s the top reason?
+
+*Summary of the Output :*
+UPI: 12,835 attempts, 711 failures, failure rate 5.5% (highest). Top error: GATEWAY_TIMEOUT (24% of failures).
+Card: 14,166 attempts, 592 failures, failure rate 4.2%. Top error: FRAUD (27.5% of failures).
+COD: 4,779 attempts, 224 failures, failure rate 4.7%. Top error: UPI_TIMEOUT (27.2% of failures).
+Wallet: 4,655 attempts, 223 failures, failure rate 4.8%. Top error: BANK_DECLINE (27.4% of failures).
+Netbanking: 3,599 attempts, 150 failures, failure rate 4.2%. Top error: BANK_DECLINE (30% of failures).
+
+*Interpretation :*      
+Failure rates are relatively consistent across methods (4–5.5%), but the reasons differ:
+UPI is most prone to gateway timeouts, suggesting infrastructure or API reliability issues. Card payments fail mainly due to fraud checks, which may be overly strict or misconfigured. Wallet and Netbanking failures are dominated by bank declines, pointing to either customer credit/debit issues or bank‑side restrictions. COD failures tied to UPI_TIMEOUT are unusual, possibly a misclassification in error logging.
+
+*Actionable Takeaways :*
+1. UPI: Work with gateway providers to reduce timeout errors.
+2. Card: Review fraud detection rules to balance risk and/or fine‑tune thresholds.
+3. Wallet/Netbanking: Engage with partner banks to understand decline reasons; improve customer messaging when declines occur.
+4. COD: Audit error logging to ensure COD failures aren’t incorrectly attributed to UPI errors.
+
+
+
