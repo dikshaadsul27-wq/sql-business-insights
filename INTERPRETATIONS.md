@@ -21,12 +21,12 @@ The main driver of revenue changes is order volume, not ticket size. Some weekda
 How well are new customer cohorts retained over the first three months after signup?
 
 *Summary of the Output :*
-The Feb 2026 cohort (cohort_month 46082) started with 1,664 signups. Retention was ~50% in month 1, ~42% in month 2, and dropped to ~19% in month 3. The Mar 2026 cohort (46113) was larger (3,382 signups) but retention fell faster: ~43% in month 1, ~18% in month 2, and no retention recorded in month 3. The Apr 2026 cohort (46143) had 3,461 signups, but only ~18% were retained in month 1, with no retention beyond that. The May 2026 cohort (46174) had 1,493 signups, but retention is recorded as zero as there is not enough data available for June.
+The March 2026 cohort started with 1,664 signups. Retention was ~50% in month 1, ~42% in month 2, and dropped to ~19% in month 3. The April 2026 cohort was larger (3,382 signups) but retention fell faster: ~43% in month 1, ~18% in month 2, and no retention recorded in month 3. The May 2026 cohort had 3,461 signups, but only ~18% were retained in month 1, with no retention recorded beyond that. The June 2026 cohort had 1,493 signups, but retention is recorded as zero as there is not enough data available.
 
 *Interpretation :*  
-Retention is strongest in the first month but declines sharply by month 3. The Feb cohort shows a healthier retention curve compared to later cohorts, suggesting either better onboarding or stronger engagement at that time. The steep drop in Mar and Apr cohorts highlights a challenge in sustaining customer interest beyond the first month. The May cohort’s zero values may indicate missing data or a serious retention issue.
+Retention is strongest in the first month but declines sharply by month 3. The March cohort shows a healthier retention curve compared to later cohorts, suggesting either better onboarding or stronger engagement at that time. The steep drop in Apr and May cohorts highlights a challenge in sustaining customer interest beyond the first month. The June cohort’s zero values may indicate missing data.
 
 *Actionable Takeaways :*
 1. Strengthen onboarding and engagement programs to sustain retention beyond the first month.
-2. Investigate why later cohorts (Mar–Apr) show weaker retention compared to Feb — possible changes in campaigns, product experience, or customer mix.
+2. Investigate why later cohorts show weaker retention compared to March, possible changes in campaigns, product experience, or customer mix.
 3. Consider targeted re‑engagement campaigns for cohorts with sharp drop‑offs, especially around month 2.
