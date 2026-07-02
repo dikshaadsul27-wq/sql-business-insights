@@ -94,5 +94,26 @@ UPI is most prone to gateway timeouts, suggesting infrastructure or API reliabil
 3. Wallet/Netbanking: Engage with partner banks to understand decline reasons; improve customer messaging when declines occur.
 4. COD: Audit error logging to ensure COD failures aren’t incorrectly attributed to UPI errors.
 
+**Q7 — Delivery SLA Breach by Carrier × Shipping Method**
 
+*Question :*
+Ops wants to know: who’s missing the 5‑day SLA, and by how much?
+
+*Summary of the Output :*
+EcomExpress (express & same‑day): Avg delivery ~4.1 days, median 4, p90 = 8. Late rate ~20–21%.
+EcomExpress (standard): Avg 3.6 days, median 3, p90 = 6. Late rate ~10%.
+Bluedart (express & same‑day): Avg ~3.5 days, median 3, p90 ~6. Late rate ~10%.
+Bluedart (standard): Avg 3.34 days, median 3, p90 = 5. Late rate ~5.7%.
+Delhivery (express & same‑day): Avg ~3.36 days, median 3, p90 = 5. Late rate ~7%.
+Delhivery (standard): Avg 3.16 days, median 3, p90 = 5. Late rate ~3.1% (best performer).
+
+*Interpretation :*      
+EcomExpress is the weakest performer: nearly 1 in 5 express/same‑day shipments breach the SLA, with long‑tail delays up to 8 days. Bluedart is stronger, keeping late rates around 10% for express/same‑day, and only ~6% for standard. Delhivery is the most reliable: both express and same‑day average under 3.4 days, with late rates ~7%, and standard shipping is outstanding at just 3% late.
+Overall, SLA breaches are concentrated in EcomExpress fast‑shipping methods, not in standard deliveries.
+
+*Actionable Takeaways :*
+1. Escalate with EcomExpress: their express/same‑day performance is missing SLA ~20% of the time.
+2. Shift volume to Delhivery standard where possible, consistently lowest late rate and fastest median delivery.
+3. Bluedart is acceptable but not best‑in‑class; monitor express/same‑day to ensure late rates don’t creep above 10%.
+Ops focus: reduce long‑tail delays (p90 hitting 8 days for EcomExpress) by tightening SLA enforcement and improving exception handling.
 
