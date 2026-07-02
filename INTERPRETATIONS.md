@@ -30,3 +30,21 @@ Retention is strongest in the first month but declines sharply by month 3. The M
 1. Strengthen onboarding and engagement programs to sustain retention beyond the first month.
 2. Investigate why later cohorts show weaker retention compared to March, possible changes in campaigns, product experience, or customer mix.
 3. Consider targeted re‑engagement campaigns for cohorts with sharp drop‑offs, especially around month 2.
+
+**Q3 — Funnel Conversion by Acquisition Channel**
+
+*Question :*
+The CMO wants to know: where in the funnel does each channel’s traffic leak — browsing, cart, checkout, or payment?
+
+*Summary of the Output :*
+Organic and Paid traffic both show similar patterns: ~40% of sessions add to cart, ~81% move to checkout, and ~86% complete purchase. Overall session‑to‑purchase conversion is ~28%. Referral, Email, and Affiliate channels perform slightly better, with session‑to‑purchase rates around 28–29%. Email stands out with the highest checkout‑to‑purchase rate (~87%). Direct traffic is negligible (60 sessions, no conversions).
+Across all channels, the biggest drop happens at the view → cart stage (only ~40% of sessions add to cart). Later stages (cart → checkout and checkout → purchase) are relatively strong, with 80–87% conversion.
+
+*Interpretation :*    
+The funnel is healthy once customers add items to cart as most proceed through checkout and payment. The main leakage is at the browse stage, where less than half of sessions convert to cart. This suggests product discovery, merchandising, or initial engagement is the biggest challenge. Email campaigns show slightly stronger purchase completion, indicating that more targeted or personalized traffic converts better.
+
+*Actionable Takeaways :*
+1. Focus on improving product discovery and cart initiation, optimize landing pages, recommendations, and promotions to push more sessions into the cart stage.
+2. Leverage email and referral channels since they show stronger end‑to‑end conversion, scale these campaigns further.
+3. Investigate direct traffic attribution to ensure sessions are tracked correctly, as current data shows zero conversions.
+4. Since checkout and payment stages are strong, prioritize top‑of‑funnel improvements rather than backend fixes.
