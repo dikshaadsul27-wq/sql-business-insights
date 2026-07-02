@@ -139,3 +139,47 @@ Revenue is highly concentrated among a small set of top spenders. While thousand
 2. Grow the mid‑tier (₹5,000–19,999): This group has potential to move into the top bucket; targeted upsell and cross‑sell campaigns can lift them.
 3. Diversify revenue sources: Reduce risk by expanding the high‑value base rather than relying too heavily on a small elite.
 
+**Q9 — Repeat Purchase Interval**
+
+*Question :*
+Lifecycle Marketing wants to know: how long until a customer comes back, and when should we send the win‑back email?
+
+*Summary of the Output :*
+Average days to next order: ~6.3 days
+Median days to next order: 1 day
+p90 days to next order: 20 days
+Customers with repeat orders: 3,759
+
+*Interpretation :*
+The median of 1 day shows that many customers place repeat orders almost immediately — often splitting one shopping session into multiple transactions. These aren’t true “come‑back” purchases, so they shouldn’t drive win‑back strategy.
+The average of ~6 days is skewed upward by customers who take longer to return.
+The p90 of 20 days highlights the long tail: 10% of repeat customers wait three weeks or more before ordering again.
+In practice, most genuine repeat purchases cluster within the first week, but a meaningful minority return only after ~3 weeks.
+
+*Actionable Takeaways :*
+1. Exclude same‑day repeats from win‑back logic, they’re session splits, not re‑engagement.
+2. Target win‑back emails around day 7–10: this aligns with the average return window, catching customers who haven’t come back after their typical cycle.
+3. Add a second reminder around day 20: this addresses the p90 group, nudging the long‑tail customers before they lapse completely.
+4. Segment by behavior: frequent buyers (median 1 day) need loyalty rewards, while slower repeaters (p90 ~20 days) need re‑engagement campaigns.
+
+**Q10 — Attribution Comparison: First‑Touch vs Last‑Touch Revenue by Channel**
+
+*Question :*
+Marketing wants to know: does our channel mix look different under first‑touch vs last‑touch attribution? Which channels open the funnel vs close it?
+
+*Summary of the Output :*
+Organic: First‑touch ₹113.7M (40.2% share), Last‑touch ₹109.4M (38.7% share).
+Paid: First‑touch ₹101.4M (35.9%), Last‑touch ₹102.0M (36.1%).
+Referral: First‑touch ₹32.6M (11.5%), Last‑touch ₹33.2M (11.8%).
+Email: First‑touch ₹17.7M (6.3%), Last‑touch ₹20.2M (7.2%).
+Affiliate: First‑touch ₹17.4M (6.2%), Last‑touch ₹18.0M (6.4%).
+
+*Interpretation :*
+Organic and Paid dominate both models, but organic is slightly stronger at the top of the funnel (first‑touch), while paid holds steady or gains slightly at the bottom (last‑touch). Referral traffic is consistent across both models, contributing ~11–12% of revenue. Email and Affiliate show a clear shift: they contribute less as first‑touch channels but gain share as last‑touch, meaning they are more effective at closing deals than opening them.
+Overall, the mix is stable, but attribution highlights different roles: organic/paid drive discovery, while email/affiliate help convert.
+
+*Actionable Takeaways :*
+1. Organic: Invest in SEO/content to keep fueling the top of funnel, the strongest opener.
+2. Paid: Reliable across both models; continue balancing acquisition and retargeting spend.
+3. Email & Affiliate: Position as closing channels — strengthen retargeting, personalized offers, and affiliate incentives to maximize their last‑touch impact.
+4. Referral: Stable contributor; maintain partnerships but don’t expect major shifts.
