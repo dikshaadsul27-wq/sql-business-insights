@@ -252,15 +252,28 @@ Row counts:[Row counts](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/
 
 ## Section C — Foreign Keys
 
-***need to check unable to run query***
 
-## Section D — Categorical Distributions
 
-Distinct value distributions on every categorical text column (status, payment_method, channel, country): [Distinct Value Distribution](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/Distinct%20Value%20Distribution.md)
-## Section E — Empty Table Check
+## Section D — ER Diagram (Mermaid)
 
-collections → 0 rows
-collection_products → 0 rows
-consents → 0 rows
+erDiagram
+    customers          ||--o{ orders : places
+    orders             ||--|{ order_items : contains
+    order_items        }o--|| product_variants : ships
+    product_variants   }o--|| products : sku_of
+    products           }o--|| categories : in
+    orders             ||--o{ payment_intents : pays_via
+    payment_intents    ||--o{ payment_transactions : attempts
+    orders             ||--o{ refunds : may_have
+    orders             ||--o{ return_requests : may_return
+    return_requests    ||--|{ return_items : with
+    orders             ||--o{ shipments : ships
+    customers          ||--o{ sessions : starts
+    sessions           ||--o{ session_events : logs
+    sessions           ||--o{ attribution_touches : has
+    attribution_touches }o--o| attribution_campaigns : maps_via_bridge
+    attribution_campaigns }o--|| marketing_campaigns : refs
+    
+## E. Five Things That Surprised Me.
 
-Note: Empty by design — do not assume data exists.
+
