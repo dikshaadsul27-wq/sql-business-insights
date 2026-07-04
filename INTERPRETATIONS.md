@@ -49,6 +49,11 @@ The CMO wants to know: where in the funnel does each channel’s traffic leak �
 Organic and Paid traffic both show similar patterns: ~40% of sessions add to cart, ~81% move to checkout, and ~86% complete purchase. Overall session‑to‑purchase conversion is ~28%. Referral, Email, and Affiliate channels perform slightly better, with session‑to‑purchase rates around 28–29%. Email stands out with the highest checkout‑to‑purchase rate (~87%). Direct traffic is negligible (60 sessions, no conversions).
 Across all channels, the biggest drop happens at the view → cart stage (only ~40% of sessions add to cart). Later stages (cart → checkout and checkout → purchase) are relatively strong, with 80–87% conversion.
 
+*Sanity checks :*  
+1. All funnel rates are between 0 and 1.
+2. Stage counts are monotonically non-increasing per channel: sessions >= product_view_sessions >= add_to_cart_sessions >= begin_checkout_sessions >= purchase_sessions.
+3. Funnel events only exist on or after 2026‑04‑19.
+
 *Interpretation :*    
 The funnel is healthy once customers add items to cart as most proceed through checkout and payment. The main leakage is at the browse stage, where less than half of sessions convert to cart. This suggests product discovery, merchandising, or initial engagement is the biggest challenge. Email campaigns show slightly stronger purchase completion, indicating that more targeted or personalized traffic converts better.
 
