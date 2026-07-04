@@ -1,10 +1,46 @@
-/* ### Q6 — Payment Failure Analysis (Method × Top Error Code)
+-- Q6 : Payment Failure Analysis (Method × Top Error Code)
+-- Owner: Diksha Adsul |  Last updated: 2026-06-22
+-- Sanity checks: failure_rate and top_error_share_of_failures are between 0 and 1.
 
-**Payments PM question:** *“Which payment methods fail most, and what’s the top reason?”*
+with method_stats as (
+    select
+        pm.method_name as payment_method
+      , count(*) as attempts
+      , sum(case when pt.status = 'failed' then 1 else 0 end) as failures
+      , sum(case when pt.status = 'failed' then 1 else 0 end)::float / nullif(count(*), 0) as failure_rate
+    from ecom.payment_transactions pt
+    join ecom.payment_intents pi on pt.payment_intent_id = pi.payment_intent_id
+    join ecom.payment_methods pm on pi.payment_method_id = pm.payment_method_id
+    group by pm.method_name
+)
 
-**Output:** `payment_method, attempts, failures, failure_rate, top_error_code, top_error_message, top_error_share_of_failures`
+, top_errors as (
+    select
+        pm.method_name as payment_method
+      , pt.error_code
+      , max(pt.error_message) as error_message
+      , count(*) as error_count
+      , row_number() over (
+            partition by pm.method_name
+            order by count(*) desc
+        ) as rn
+    from ecom.payment_transactions pt
+    join ecom.payment_intents pi on pt.payment_intent_id = pi.payment_intent_id
+    join ecom.payment_methods pm on pi.payment_method_id = pm.payment_method_id
+    where pt.status = 'failed'
+    group by pm.method_name, pt.error_code
+)
 
-**Sanity check:** `failure_rate` and `top_error_share_of_failures` both in `[0, 1]`.
-
-**Pattern note:** Two CTEs. CTE 1 aggregates attempts/failures per method. CTE 2 ranks error codes per method with `row_number() over (partition by payment_method order by error_count desc)` and filters `rn = 1`. Then join. A `group by` alone cannot pick the top error per method — this is the classic top-N-per-group pattern, a top-5 SQL interview question.
-*/
+select
+    ms.payment_method
+  , ms.attempts
+  , ms.failures
+  , (ms.failure_rate)::numeric(12,4) as failure_rate
+  , te.error_code as top_error_code
+  , te.error_message as top_error_message
+  , (te.error_count::numeric / nullif(ms.failures, 0))::numeric(12,4) as top_error_share_of_failures
+from method_stats ms
+left join top_errors te
+    on ms.payment_method = te.payment_method
+   and te.rn = 1
+order by ms.failures desc;
