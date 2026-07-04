@@ -256,6 +256,7 @@ Row counts:[Row counts](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/
 
 ## Section D — ER Diagram (Mermaid)
 
+```mermaid
 erDiagram
     customers          ||--o{ orders : places
     orders             ||--|{ order_items : contains
@@ -273,6 +274,7 @@ erDiagram
     sessions           ||--o{ attribution_touches : has
     attribution_touches }o--o| attribution_campaigns : maps_via_bridge
     attribution_campaigns }o--|| marketing_campaigns : refs
+
     
 ## E. Five Things That Surprised Me.
 
