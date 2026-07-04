@@ -275,7 +275,4 @@ erDiagram
     attribution_touches }o--o| attribution_campaigns : maps_via_bridge
     attribution_campaigns }o--|| marketing_campaigns : refs
 
-    
-## E. Five Things That Surprised Me.
-
 
