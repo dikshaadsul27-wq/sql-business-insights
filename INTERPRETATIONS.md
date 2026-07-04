@@ -91,7 +91,9 @@ Accessories: ₹0.68M revenue, 859 units sold, 173 returns, return rate 27.6%.
 Other apparel categories (Jackets, Jeans, Tops) and beauty (Skincare, Haircare, Makeup) all show return rates in the 25–28% range.
 
 *Sanity checks :*  
-1. 
+1. Return rate % is between 0 to 100.
+2. Returns are less than orders with the category.
+3. sum(line_total) paid = sum of revenue for each category =  24,381,138
 
 *Interpretation :*      
 High‑value electronics (Smartwatches, Headphones, Speakers) generate the most revenue but still face return rates above 24%. Fashion and lifestyle categories (Shoes, Jackets, Accessories) show even higher return rates, often exceeding 27%. Kitchen products are the worst performer, with nearly 1 in 3 units returned. Bedding and Jeans are slightly better, but still above 24%. Overall, no category is below 24% return rate.
@@ -115,7 +117,7 @@ Wallet: 4,655 attempts, 223 failures, failure rate 4.8%. Top error: BANK_DECLINE
 Netbanking: 3,599 attempts, 150 failures, failure rate 4.2%. Top error: BANK_DECLINE (30% of failures).
 
 *Sanity checks :*  
-1. 
+1. failure_rate and top_error_share_of_failures are between 0 and 1.
 
 *Interpretation :*      
 Failure rates are relatively consistent across methods (4–5.5%), but the reasons differ:
@@ -141,7 +143,8 @@ Delhivery (express & same‑day): Avg ~3.36 days, median 3, p90 = 5. Late rate ~
 Delhivery (standard): Avg 3.16 days, median 3, p90 = 5. Late rate ~3.1% (best performer).
 
 *Sanity checks :*  
-1. 
+1. avg_delivery_days <= p90_delivery_days on every row.
+2. late_rate is between 0 and 1.
 
 *Interpretation :*      
 EcomExpress is the weakest performer: nearly 1 in 5 express/same‑day shipments breach the SLA, with long‑tail delays up to 8 days. Bluedart is stronger, keeping late rates around 10% for express/same‑day, and only ~6% for standard. Delhivery is the most reliable: both express and same‑day average under 3.4 days, with late rates ~7%, and standard shipping is outstanding at just 3% late.
@@ -168,7 +171,8 @@ Customers are grouped into four lifetime value (LTV) buckets:
 The bucket share calculation shows that the ₹20,000+ group contributes the majority of revenue, followed by the ₹5,000–19,999 group. The lower buckets together represent a large customer base but only a minority of revenue.
 
 *Sanity checks :*  
-1. 
+1. Total revenue of all customers = sum(total) of all orders excluding 'cancelled' = 282,859,232.18
+2. ltv_bucket_share_of_revenue summed across distinct buckets equals 0.994
 
 *Interpretation :*      
 Revenue is highly concentrated among a small set of top spenders. While thousands of customers fall into the lower buckets, their combined contribution is overshadowed by a few high‑LTV customers. This indicates strong dependence on a small elite segment, which is both an opportunity (high ROI from retention) and a risk (over‑reliance on a narrow base).
@@ -190,7 +194,8 @@ p90 days to next order: 20 days
 Customers with repeat orders: 3,759
 
 *Sanity checks :*  
-1. 
+1. days_to_next_order >= 0 on every row.
+2. median <= p90 in the summary.
 
 *Interpretation :*
 The median of 1 day shows that many customers place repeat orders almost immediately — often splitting one shopping session into multiple transactions. These aren’t true “come‑back” purchases, so they shouldn’t drive win‑back strategy.
