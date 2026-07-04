@@ -222,7 +222,7 @@ Email: First‑touch ₹17.7M (6.3%), Last‑touch ₹20.2M (7.2%).
 Affiliate: First‑touch ₹17.4M (6.2%), Last‑touch ₹18.0M (6.4%).
 
 *Sanity checks :*  
-1. 
+1. Total revenue under first_touch = total under last_touch = total non-cancelled revenue in ecom.orders = 282,859,232.18
 
 *Interpretation :*
 Organic and Paid dominate both models, but organic is slightly stronger at the top of the funnel (first‑touch), while paid holds steady or gains slightly at the bottom (last‑touch). Referral traffic is consistent across both models, contributing ~11–12% of revenue. Email and Affiliate show a clear shift: they contribute less as first‑touch channels but gain share as last‑touch, meaning they are more effective at closing deals than opening them.
