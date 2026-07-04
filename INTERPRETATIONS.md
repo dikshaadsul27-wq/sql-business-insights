@@ -7,8 +7,8 @@ How are we performing today compared to yesterday, and compared to the same week
 Revenue is moving up and down quite sharply. Day‑over‑day changes range from drops of around ‑74% to gains of nearly +49%. When we compare to the same weekday last week, the swings are also big from ‑78% declines to +65% growth. Orders vary a lot too, from under 200 on weaker days to close to 1,000 on stronger ones, while AOV stays fairly steady around ₹7,000–₹8,000. Paid order rates are mostly healthy at 93–96%, except for one day where cancellations spiked above 50%. Refunds are usually small, but there are occasional large reversals (₹30,000+).
 
 *Sanity checks :*  
-paid_order_rate and cancelled_order_rate are between 0 and 1. 
-sum(orders) in the output = count(*) of orders = 40000
+1. paid_order_rate and cancelled_order_rate are between 0 and 1. 
+2. sum(orders) in the output = count(*) of orders = 40000
 
 *Interpretation :*  
 The main driver of revenue changes is order volume, not ticket size. Some weekdays consistently underperform with WoW declines of 30–40%, while others show strong growth of 47–65%. The cancellation spike is a clear anomaly and points to an operational issue that needs attention. Refund spikes, though rare, can still dent net revenue and customer confidence.
@@ -27,6 +27,11 @@ How well are new customer cohorts retained over the first three months after sig
 *Summary of the Output :*
 The March 2026 cohort started with 1,664 signups. Retention was ~50% in month 1, ~42% in month 2, and dropped to ~19% in month 3. The April 2026 cohort was larger (3,382 signups) but retention fell faster: ~43% in month 1, ~18% in month 2, and no retention recorded in month 3. The May 2026 cohort had 3,461 signups, but only ~18% were retained in month 1, with no retention recorded beyond that. The June 2026 cohort had 1,493 signups, but retention is recorded as zero as there is not enough data available.
 
+*Sanity checks :*  
+1. Cohort size validated for each month cohort size(month) = count(Distinct customer_id) of month
+2. Retention rate is between 0 and 1.
+3. As there are only 4 months of data, later cohorts show Null instead of 0 retention.
+  
 *Interpretation :*  
 Retention is strongest in the first month but declines sharply by month 3. The March cohort shows a healthier retention curve compared to later cohorts, suggesting either better onboarding or stronger engagement at that time. The steep drop in Apr and May cohorts highlights a challenge in sustaining customer interest beyond the first month. The June cohort’s zero values may indicate missing data.
 
