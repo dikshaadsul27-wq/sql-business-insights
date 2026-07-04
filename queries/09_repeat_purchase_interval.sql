@@ -1,10 +1,64 @@
-/* ### Q9 — Repeat Purchase Interval
+-- Q9 .1— Repeat Purchase Interval (Row Level)
+-- Owner: Diksha Adsul |  Last updated: 2026-07-01
+-- Sanity checks: days_to_next_order >= 0 on every row.
 
-**Lifecycle Marketing question:** *“How long until a customer comes back? When should we send the win-back email?”*
+with intervals as (
+    select
+        o.customer_id
+      , o.order_id
+      , o.created_at as order_date
+      , lead(o.created_at) over (
+            partition by o.customer_id
+            order by o.created_at
+        ) as next_order_date
+      , date_part(
+            'day'
+          , lead(o.created_at) over (
+                partition by o.customer_id
+                order by o.created_at
+            ) - o.created_at
+        ) as days_to_next_order
+    from ecom.orders o
+    where lower(o.status) = 'paid'
+)
 
-**Output (row-level):** `customer_id, order_id, order_date, next_order_date, days_to_next_order`**Output (summary):** `avg_days_to_next_order, median_days_to_next_order, p90_days_to_next_order, customers_with_repeat_order`
+select
+    customer_id
+  , order_id
+  , order_date
+  , next_order_date
+  , days_to_next_order
+from intervals
+order by customer_id, order_date;
 
-**Sanity check:** `days_to_next_order >= 0` on every row. `median <= p90` in the summary.
+-- Q9 .2— Repeat Purchase Interval (Summary)
+-- Owner: Diksha Adsul |  Last updated: 2026-07-01
+-- Sanity checks: median <= p90.
 
-**Pattern note:** `lead(created_at) over (partition by customer_id order by created_at)`. Filter out the last order per customer (`next_order_date IS NULL`) from the summary — including them biases the average toward infinity. You will also find a fat cluster of near-zero intervals: customers who split one shopping session into multiple orders minutes apart. Decide whether a same-day follow-up order counts as “coming back” (hint: a win-back email is irrelevant to it), compute the summary both ways, and document the choice — this single decision moves the median by days.
-*/
+with intervals as (
+    select
+        o.customer_id
+      , o.order_id
+      , o.created_at as order_date
+      , lead(o.created_at) over (
+            partition by o.customer_id
+            order by o.created_at
+        ) as next_order_date
+      , date_part(
+            'day'
+          , lead(o.created_at) over (
+                partition by o.customer_id
+                order by o.created_at
+            ) - o.created_at
+        ) as days_to_next_order
+    from ecom.orders o
+    where lower(o.status) = 'paid'
+)
+
+select
+    round(avg(days_to_next_order)::numeric, 2) as avg_days_to_next_order
+  , percentile_cont(0.5) within group (order by days_to_next_order) as median_days_to_next_order
+  , percentile_cont(0.9) within group (order by days_to_next_order) as p90_days_to_next_order
+  , count(distinct customer_id) as customers_with_repeat_order
+from intervals
+where next_order_date is not null;
