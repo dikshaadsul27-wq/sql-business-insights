@@ -63,6 +63,19 @@ The funnel is healthy once customers add items to cart as most proceed through c
 3. Investigate direct traffic attribution to ensure sessions are tracked correctly, as current data shows zero conversions.
 4. Since checkout and payment stages are strong, prioritize top‑of‑funnel improvements rather than backend fixes.
 
+**Q4 — Top Products by Net Revenue (After Refunds)**
+
+*Question :*
+
+*Summary of the Output :*
+
+*Sanity checks :*  
+1. Sum of gross revenue = sum (qty * unit price) = 25,30,47,045
+
+*Interpretation :*      
+
+*Actionable Takeaways :*
+
 **Q5 — Category Health: Purchases → Returns**
 
 *Question :*
@@ -76,6 +89,9 @@ Shoes: ₹1.62M revenue, 815 units sold, 162 returns, return rate 27.6%.
 Kitchen: ₹1.37M revenue, 745 units sold, 157 returns, return rate 29.3% (highest).
 Accessories: ₹0.68M revenue, 859 units sold, 173 returns, return rate 27.6%.
 Other apparel categories (Jackets, Jeans, Tops) and beauty (Skincare, Haircare, Makeup) all show return rates in the 25–28% range.
+
+*Sanity checks :*  
+1. 
 
 *Interpretation :*      
 High‑value electronics (Smartwatches, Headphones, Speakers) generate the most revenue but still face return rates above 24%. Fashion and lifestyle categories (Shoes, Jackets, Accessories) show even higher return rates, often exceeding 27%. Kitchen products are the worst performer, with nearly 1 in 3 units returned. Bedding and Jeans are slightly better, but still above 24%. Overall, no category is below 24% return rate.
@@ -97,6 +113,9 @@ Card: 14,166 attempts, 592 failures, failure rate 4.2%. Top error: FRAUD (27.5% 
 COD: 4,779 attempts, 224 failures, failure rate 4.7%. Top error: UPI_TIMEOUT (27.2% of failures).
 Wallet: 4,655 attempts, 223 failures, failure rate 4.8%. Top error: BANK_DECLINE (27.4% of failures).
 Netbanking: 3,599 attempts, 150 failures, failure rate 4.2%. Top error: BANK_DECLINE (30% of failures).
+
+*Sanity checks :*  
+1. 
 
 *Interpretation :*      
 Failure rates are relatively consistent across methods (4–5.5%), but the reasons differ:
@@ -120,6 +139,9 @@ Bluedart (express & same‑day): Avg ~3.5 days, median 3, p90 ~6. Late rate ~10%
 Bluedart (standard): Avg 3.34 days, median 3, p90 = 5. Late rate ~5.7%.
 Delhivery (express & same‑day): Avg ~3.36 days, median 3, p90 = 5. Late rate ~7%.
 Delhivery (standard): Avg 3.16 days, median 3, p90 = 5. Late rate ~3.1% (best performer).
+
+*Sanity checks :*  
+1. 
 
 *Interpretation :*      
 EcomExpress is the weakest performer: nearly 1 in 5 express/same‑day shipments breach the SLA, with long‑tail delays up to 8 days. Bluedart is stronger, keeping late rates around 10% for express/same‑day, and only ~6% for standard. Delhivery is the most reliable: both express and same‑day average under 3.4 days, with late rates ~7%, and standard shipping is outstanding at just 3% late.
@@ -145,6 +167,9 @@ Customers are grouped into four lifetime value (LTV) buckets:
 
 The bucket share calculation shows that the ₹20,000+ group contributes the majority of revenue, followed by the ₹5,000–19,999 group. The lower buckets together represent a large customer base but only a minority of revenue.
 
+*Sanity checks :*  
+1. 
+
 *Interpretation :*      
 Revenue is highly concentrated among a small set of top spenders. While thousands of customers fall into the lower buckets, their combined contribution is overshadowed by a few high‑LTV customers. This indicates strong dependence on a small elite segment, which is both an opportunity (high ROI from retention) and a risk (over‑reliance on a narrow base).
 
@@ -163,6 +188,9 @@ Average days to next order: ~6.3 days
 Median days to next order: 1 day
 p90 days to next order: 20 days
 Customers with repeat orders: 3,759
+
+*Sanity checks :*  
+1. 
 
 *Interpretation :*
 The median of 1 day shows that many customers place repeat orders almost immediately — often splitting one shopping session into multiple transactions. These aren’t true “come‑back” purchases, so they shouldn’t drive win‑back strategy.
@@ -187,6 +215,9 @@ Paid: First‑touch ₹101.4M (35.9%), Last‑touch ₹102.0M (36.1%).
 Referral: First‑touch ₹32.6M (11.5%), Last‑touch ₹33.2M (11.8%).
 Email: First‑touch ₹17.7M (6.3%), Last‑touch ₹20.2M (7.2%).
 Affiliate: First‑touch ₹17.4M (6.2%), Last‑touch ₹18.0M (6.4%).
+
+*Sanity checks :*  
+1. 
 
 *Interpretation :*
 Organic and Paid dominate both models, but organic is slightly stronger at the top of the funnel (first‑touch), while paid holds steady or gains slightly at the bottom (last‑touch). Referral traffic is consistent across both models, contributing ~11–12% of revenue. Email and Affiliate show a clear shift: they contribute less as first‑touch channels but gain share as last‑touch, meaning they are more effective at closing deals than opening them.
