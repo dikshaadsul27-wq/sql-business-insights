@@ -66,15 +66,25 @@ The funnel is healthy once customers add items to cart as most proceed through c
 **Q4 — Top Products by Net Revenue (After Refunds)**
 
 *Question :*
+“Which products actually make us money : Net Revenue?”
 
 *Summary of the Output :*
+The top products by net revenue (after refunds/returns) are dominated by electronics, particularly Headphones, Smartwatches, and Speakers. The dataset covers ~4,000 products with total gross revenue of approximately ₹253M and net revenue of ₹250M (refunds/returns totaling ~₹3.3M).
+Key Highlights from Top Performers:
+1. Eastlight Clarity ANC Headphones (Headphones) — ₹918K net, 0% return rate.
+2. Marigold Home Craft Lite Wireless Earbuds — ₹908K net.
+3. Tarang Active Smartwatch — ₹905K net.
 
 *Sanity checks :*  
 1. Sum of gross revenue = sum (qty * unit price) = 25,30,47,045
 
 *Interpretation :*      
+The business is heavily driven by consumer electronics (wearables + audio), which deliver high volume, strong margins, and generally low return rates. Returns/refunds are modest overall (~1.3% of gross), but a small number of products show elevated return rates (some >10-20%, often lower-volume SKUs in apparel, beauty, or niche items).
 
 *Actionable Takeaways :*
+1. Prioritize inventory, marketing, and promotions for top Smartwatches, ANC Headphones, and Speakers. Explore bundling or variants of high-net performers.
+2. Investigate SKUs with unusually high return rates, could indicate quality, sizing, expectation mismatch, or description issues. Set return rate thresholds for product reviews.
+3. Electronics drive the bulk of profit; continue expanding successful sub-categories (e.g., kids smartwatches, premium audio) while cautiously scaling apparel/beauty lines where returns can hurt more.
 
 **Q5 — Category Health: Purchases → Returns**
 
@@ -184,31 +194,29 @@ Revenue is highly concentrated among a small set of top spenders. While thousand
 
 **Q9 — Repeat Purchase Interval**
 
-*Question :*
-Lifecycle Marketing wants to know: how long until a customer comes back, and when should we send the win‑back email?
+*Question :*  
+“How long until a customer comes back? When should we send the win‑back email?”
 
 *Summary of the Output :*
-Average days to next order: ~6.3 days
-Median days to next order: 1 day
-p90 days to next order: 20 days
-Customers with repeat orders: 3,759
+Average days to next order: ~14.7 days
+Median days to next order: 8 days
+90th percentile (p90): 41 days
+Customers with repeat orders: 690
 
 *Sanity checks :*  
 1. days_to_next_order >= 0 on every row.
 2. median <= p90 in the summary.
 
-*Interpretation :*
-The median of 1 day shows that many customers place repeat orders almost immediately — often splitting one shopping session into multiple transactions. These aren’t true “come‑back” purchases, so they shouldn’t drive win‑back strategy.
-The average of ~6 days is skewed upward by customers who take longer to return.
-The p90 of 20 days highlights the long tail: 10% of repeat customers wait three weeks or more before ordering again.
-In practice, most genuine repeat purchases cluster within the first week, but a meaningful minority return only after ~3 weeks.
+*Interpretation :*      
+The median of 8 days shows that half of repeat customers return within just over a week. This is the most representative “typical” comeback window. The average of ~15 days is skewed upward by slower repeaters, indicating a meaningful tail of customers who take longer to return.The p90 of 41 days highlights that 10% of repeat customers wait six weeks or more before placing another order. Compared to earlier runs (where median was 1 day due to same‑day session splits), this cleaned dataset excludes those near‑zero intervals, giving a more realistic view of genuine repeat behavior.
+In practice, most customers return within 1–2 weeks, but a significant minority only re‑engage after a month or more.
 
 *Actionable Takeaways :*
-1. Exclude same‑day repeats from win‑back logic, they’re session splits, not re‑engagement.
-2. Target win‑back emails around day 7–10: this aligns with the average return window, catching customers who haven’t come back after their typical cycle.
-3. Add a second reminder around day 20: this addresses the p90 group, nudging the long‑tail customers before they lapse completely.
-4. Segment by behavior: frequent buyers (median 1 day) need loyalty rewards, while slower repeaters (p90 ~20 days) need re‑engagement campaigns.
-
+1. Primary win‑back trigger: Send the first win‑back email around day 10–12, just after the median comeback window, to catch customers who haven’t returned in their typical cycle.
+2. Secondary reminder: Add a follow‑up around day 35–40, aligned with the p90, to re‑engage the long‑tail customers before they lapse completely.
+3. Segment strategy: Fast repeaters (≤8 days) → nurture with loyalty rewards rather than win‑back.
+4. Slow repeaters (20–40 days) → target with re‑engagement offers or personalized nudges.
+ 
 **Q10 — Attribution Comparison: First‑Touch vs Last‑Touch Revenue by Channel**
 
 *Question :*
