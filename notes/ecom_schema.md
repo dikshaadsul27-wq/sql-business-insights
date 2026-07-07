@@ -276,3 +276,5 @@ erDiagram
     attribution_campaigns }o--|| marketing_campaigns : refs
 ```
 ## E. Five Things That Surprised Me
+1. Items with 0 return count also incurred refund cost greater than 0 which could be due to multiple reasons (customer_request, duplicate_charge, fraud_chargeback, product not returned due to high logistic cost but refund processed).
+2. Refund cost is tagged against order id instead of item id which makes it challenging to calculate exact refund amount by products.
