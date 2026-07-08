@@ -35,7 +35,7 @@ erDiagram
 Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-task-1-sql-foundation)
 
 The dashboard consists of below metrics
-1. [Revenue by Order Date](screenshots/Revenue by Order Date.png)
+1. [Revenue by Order Date]([screenshots/Revenue by Order Date.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/c1db18714f003f7080d13df01abdb33657575437/screenshots/Revenue%20by%20Order%20Date.png))
 2. [Cohort by Month](screenshots/Cohort by Month.png)
 3. [Customer Retention by Month](screenshots/Customer Retention by Month.png)
 4. [Funnel Conversion by Acquisition Channel](screenshots/Funnel Conversion by Acquisition Channel.png)
