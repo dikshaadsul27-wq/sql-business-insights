@@ -92,27 +92,25 @@ The business is heavily driven by consumer electronics (wearables + audio), whic
 The Category Manager wants to know: which categories generate the most revenue, and which suffer the highest return rates?
 
 *Summary of the Output :*
-Smartwatch: ₹6.22M revenue, 720 units sold, 127 returns, return rate 24.1%.
-Headphones: ₹3.95M revenue, 792 units sold, 143 returns, return rate 24.5%.
-Speakers: ₹3.25M revenue, 638 units sold, 129 returns, return rate 26.7%.
-Shoes: ₹1.62M revenue, 815 units sold, 162 returns, return rate 27.6%.
-Kitchen: ₹1.37M revenue, 745 units sold, 157 returns, return rate 29.3% (highest).
-Accessories: ₹0.68M revenue, 859 units sold, 173 returns, return rate 27.6%.
-Other apparel categories (Jackets, Jeans, Tops) and beauty (Skincare, Haircare, Makeup) all show return rates in the 25–28% range.
+The dataset covers 14 categories with total revenue of approximately ₹210M. Tech categories (Smartwatches, Headphones, Speakers) dominate revenue, while lifestyle categories (Shoes, Kitchen, Decor, Accessories, Haircare, Skincare) contribute smaller shares but show higher return rates.
+Key Highlights from Top Performers:
+1. Smartwatches — ₹59.7M revenue, 2.53% return rate.
+2. Headphones — ₹38.1M revenue, 2.68% return rate.
+3. Speakers — ₹32.9M revenue, 2.65% return rate.
 
 *Sanity checks :*  
 1. Return rate % is between 0 to 100.
 2. Returns are less than orders with the category.
-3. sum(line_total) paid = sum of revenue for each category =  24,381,138
+3. sum(line_total) paid = sum of revenue for each category =  239,583,750
 
 *Interpretation :*      
-High‑value electronics (Smartwatches, Headphones, Speakers) generate the most revenue but still face return rates above 24%. Fashion and lifestyle categories (Shoes, Jackets, Accessories) show even higher return rates, often exceeding 27%. Kitchen products are the worst performer, with nearly 1 in 3 units returned. Bedding and Jeans are slightly better, but still above 24%. Overall, no category is below 24% return rate.
+The business is heavily driven by consumer electronics (wearables + audio), which deliver high revenue and relatively low return rates (~2.5–2.7%). Lifestyle categories (Shoes, Kitchen, Decor, Accessories, Haircare, Skincare) generate moderate revenue but show higher return rates (approaching or exceeding 3%). Even small differences in return rate matter at scale, Accessories at 3.14% and Haircare at 2.94% represent significant margin leakage relative to their revenue size. Bedding and Jeans are stable mid‑tier categories with lower return rates (~2.4–2.5%), suggesting reliable performance.
 
 *Actionable Takeaways :*
-1. Electronics (Smartwatches, Headphones) are strong revenue drivers, but their return rates need attention, possibly due to product fit, expectations, or technical issues.
-2. Kitchen and Shoes categories are red flags: return rates above 27–29% suggest quality or mismatch problems. These need immediate investigation.
-3. Apparel and beauty categories show consistently high returns (25–28%), indicating sizing, fit, or expectation issues. Consider better product descriptions, sizing guides, or stricter quality checks.
-4. Focus retention and profitability efforts on categories like Smartwatches and Headphones, where revenue is high, while aggressively reducing returns in categories like Kitchen and Shoes.
+1. Smartwatches, Headphones, and Speakers are clear profit engines. Continue investing in inventory, marketing, and bundling strategies here.
+2. Accessories, Haircare, and Kitchen show elevated return rates. Audit product quality, sizing, and customer expectations to reduce refund leakage.
+3. Reallocate resources toward proven tech earners while cautiously scaling lifestyle categories where returns erode margins.
+4. Establish return rate benchmarks (e.g., >3% triggers review) to systematically monitor category health.
 
 **Q6 — Payment Failure Analysis (Method × Top Error Code)**
 
@@ -198,24 +196,24 @@ Revenue is highly concentrated among a small set of top spenders. While thousand
 “How long until a customer comes back? When should we send the win‑back email?”
 
 *Summary of the Output :*
-Average days to next order: ~14.7 days
-Median days to next order: 8 days
-90th percentile (p90): 41 days
-Customers with repeat orders: 690
+Average days to next order: ~5.91 days
+Median days to next order: 1 day
+90th percentile (p90): 19 days
+Customers with repeat orders: 3759
 
 *Sanity checks :*  
 1. days_to_next_order >= 0 on every row.
 2. median <= p90 in the summary.
 
 *Interpretation :*      
-The median of 8 days shows that half of repeat customers return within just over a week. This is the most representative “typical” comeback window. The average of ~15 days is skewed upward by slower repeaters, indicating a meaningful tail of customers who take longer to return.The p90 of 41 days highlights that 10% of repeat customers wait six weeks or more before placing another order. Compared to earlier runs (where median was 1 day due to same‑day session splits), this cleaned dataset excludes those near‑zero intervals, giving a more realistic view of genuine repeat behavior.
-In practice, most customers return within 1–2 weeks, but a significant minority only re‑engage after a month or more.
+The median of 1 day shows a fat cluster of customers placing multiple orders in the same session or within 24 hours. These are not meaningful for lifecycle marketing — a win‑back email is irrelevant here. The average of ~6 days reflects a broader mix of behaviors, but is still pulled down by near‑zero intervals. The p90 of 19 days is more representative of the long‑tail, most customers who return do so within ~3 weeks. Excluding 0‑day intervals shifts the average upward (closer to ~17 days in prior recalculations), giving a truer picture of lifecycle repeats.
+Customers either return almost immediately (same‑session) or after ~1–3 weeks. There is a clear bifurcation between “session splits” and “true repeat purchases.”
 
 *Actionable Takeaways :*
-1. Primary win‑back trigger: Send the first win‑back email around day 10–12, just after the median comeback window, to catch customers who haven’t returned in their typical cycle.
-2. Secondary reminder: Add a follow‑up around day 35–40, aligned with the p90, to re‑engage the long‑tail customers before they lapse completely.
-3. Segment strategy: Fast repeaters (≤8 days) → nurture with loyalty rewards rather than win‑back.
-4. Slow repeaters (20–40 days) → target with re‑engagement offers or personalized nudges.
+1. Target emails around day 7–10 (when average return occurs) and a reminder around day 19–20 (p90 cutoff).
+2. Do not count 0‑day or same‑session repeats in lifecycle metrics — they distort averages and median.
+3. Separate “immediate repeaters” (session splits) from “true lifecycle repeaters” to design more relevant campaigns.
+4. The difference between including vs. excluding 0‑day intervals materially changes the story (median 1 vs. ~7 days). Document the choice clearly for leadership.
  
 **Q10 — Attribution Comparison: First‑Touch vs Last‑Touch Revenue by Channel**
 
