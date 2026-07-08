@@ -36,7 +36,7 @@ Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-
 
 The dashboard consists of below metrics
 1. [Revenue by Order Date] : [screenshots/Revenue by Order Date.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/c1db18714f003f7080d13df01abdb33657575437/screenshots/Revenue%20by%20Order%20Date.png)
-2. [Cohort by Month] : (https://github.com/dikshaadsul27-wq/sql-business-insights/blob/b5512d164bdbf59863d356a31a0f66f9740ff15e/screenshots/Cohort%20by%20Month.png)
+2. [Cohort by Month] : [screenshots/Cohort by Month.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/b5512d164bdbf59863d356a31a0f66f9740ff15e/screenshots/Cohort%20by%20Month.png)
 3. [Customer Retention by Month]
 4. [Funnel Conversion by Acquisition Channel]
 5. [Top Products by Net Revenue (After Refunds)]
