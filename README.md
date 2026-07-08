@@ -32,6 +32,7 @@ erDiagram
 ```
 
 ## Dashboard
+Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-task-1-sql-foundation)
 The dashboard consists of below metrics
 1. Revenue by Order Date : 
 2. Cohort by Month : 
