@@ -48,14 +48,14 @@ The dashboard consists of below metrics
 ## What's in this repo
 This repository documents an e‑commerce analytics case study with SQL queries, schema notes, interpretations, and visual outputs. It is organized as follows:
 
-##notes/  
+## notes/  
 - Supporting documentation and schema exploration:
 - Distinct Value Distribution.md — profiling distinct values across key fields.
 - Inventory.md — product inventory notes.
 - Row counts.md — dataset size checks.
 - ecom_schema.md — schema reconnaissance and table relationships.
 
-##queries/  
+# queries/  
 SQL scripts answering 10 core business questions:
 - 01_daily_business_summary.sql — daily KPIs (revenue, orders).
 - 02_monthly_cohort_retention.sql — retention by signup cohort.
