@@ -32,7 +32,7 @@ from intervals
 order by customer_id, order_date;
 
 -- Q9 .2— Repeat Purchase Interval (Summary)
--- Owner: Diksha Adsul |  Last updated: 2026-07-01
+-- Owner: Diksha Adsul |  Last updated: 2026-07-08
 -- Sanity checks: median <= p90.
 
 with intervals as (
@@ -52,7 +52,7 @@ with intervals as (
             ) - o.created_at
         ) as days_to_next_order
     from ecom.orders o
-    where lower(o.status) = 'paid'
+    where o.payment_status = 'paid' and lower(o.status) <> 'cancelled'
 )
 
 select
