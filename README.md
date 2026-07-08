@@ -49,11 +49,11 @@ The dashboard consists of below metrics
 This repository documents an e‑commerce analytics case study with SQL queries, schema notes, interpretations, and visual outputs. It is organized as follows:
 
 *notes/  
--Supporting documentation and schema exploration:
--Distinct Value Distribution.md — profiling distinct values across key fields.
--Inventory.md — product inventory notes.
--Row counts.md — dataset size checks.
--ecom_schema.md — schema reconnaissance and table relationships.
+- Supporting documentation and schema exploration:
+- Distinct Value Distribution.md — profiling distinct values across key fields.
+- Inventory.md — product inventory notes.
+- Row counts.md — dataset size checks.
+- ecom_schema.md — schema reconnaissance and table relationships.
 
 *queries/  
 SQL scripts answering 10 core business questions:
