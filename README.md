@@ -83,6 +83,32 @@ Consolidated case study write‑up.
 Repository documentation (this file).
 
 ## How to run
-...
+'''
+1. Clone the repository
+
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+
+2. Set up a database connection
+
+Use any SQL client (e.g., PostgreSQL, MySQL, or your BI tool) connected to the ecom dataset.
+Ensure the schema matches the one documented in notes/ecom_schema.md.
+
+3. Run queries
+
+Navigate to the queries/ folder.
+Each .sql file answers a specific business question (e.g., 04_top_products_by_net_revenue.sql).
+Execute the query in your SQL client to generate results.
+
+4. View outputs
+
+Results can be validated against the sanity checks noted in each query.
+Visual outputs are available in the screenshots/ folder for quick reference.
+Business interpretations are documented in INTERPRETATIONS.md.
+
+5. Case study narrative
+
+Read case_study.md for a consolidated walkthrough of the analysis and insights.
+'''
 
 ## Reflection
