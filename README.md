@@ -35,16 +35,15 @@ erDiagram
 Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-task-1-sql-foundation)
 
 The dashboard consists of below metrics
-1. [Revenue by Order Date](screenshots/Revenue by Order Date)
-2. Cohort by Month : 
-3. Customer Retention by Month : 
-4. Funnel Conversion by Acquisition Channel : 
-5. Top Products by Net Revenue (After Refunds): 
-6. Category by Revenue and Return Rate : 
-7. Payment Failure Rate with Top Reasons : 
-8. Delivery SLA Breach by Carrier × Shipping Method : 
-9. Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel : 
-
+1. [Revenue by Order Date](screenshots/Revenue by Order Date.png)
+2. [Cohort by Month](screenshots/Cohort by Month.png)
+3. [Customer Retention by Month](screenshots/Customer Retention by Month.png)
+4. [Funnel Conversion by Acquisition Channel](screenshots/Funnel Conversion by Acquisition Channel.png)
+5. [Top Products by Net Revenue (After Refunds)](screenshots/Top Products by Net Revenue (After Refunds).png)
+6. [Category by Revenue and Return Rate](screenshots/Category by Revenue and Return Rate.png)
+7. [Payment Failure Rate with Top Reasons](screenshots/Payment Failure Rate with Top Reasons.png)
+8. [Delivery SLA Breach by Carrier × Shipping Method](screenshots/Delivery SLA Breach by Carrier × Shipping Method.png)
+9. [Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel](screenshots/Attribution Comparison-FirstTouch vs LastTouch Revenue by Channel.png)
 
 ## What's in this repo
 ...
