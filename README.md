@@ -35,15 +35,15 @@ erDiagram
 Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-task-1-sql-foundation)
 
 The dashboard consists of below metrics
-1. [Revenue by Order Date]([screenshots/Revenue by Order Date.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/c1db18714f003f7080d13df01abdb33657575437/screenshots/Revenue%20by%20Order%20Date.png))
-2. [Cohort by Month](screenshots/Cohort by Month.png)
-3. [Customer Retention by Month](screenshots/Customer Retention by Month.png)
-4. [Funnel Conversion by Acquisition Channel](screenshots/Funnel Conversion by Acquisition Channel.png)
-5. [Top Products by Net Revenue (After Refunds)](screenshots/Top Products by Net Revenue (After Refunds).png)
-6. [Category by Revenue and Return Rate](screenshots/Category by Revenue and Return Rate.png)
-7. [Payment Failure Rate with Top Reasons](screenshots/Payment Failure Rate with Top Reasons.png)
-8. [Delivery SLA Breach by Carrier × Shipping Method](screenshots/Delivery SLA Breach by Carrier × Shipping Method.png)
-9. [Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel](screenshots/Attribution Comparison-FirstTouch vs LastTouch Revenue by Channel.png)
+1. [Revenue by Order Date] : [screenshots/Revenue by Order Date.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/c1db18714f003f7080d13df01abdb33657575437/screenshots/Revenue%20by%20Order%20Date.png)
+2. [Cohort by Month] : (https://github.com/dikshaadsul27-wq/sql-business-insights/blob/b5512d164bdbf59863d356a31a0f66f9740ff15e/screenshots/Cohort%20by%20Month.png)
+3. [Customer Retention by Month]
+4. [Funnel Conversion by Acquisition Channel]
+5. [Top Products by Net Revenue (After Refunds)]
+6. [Category by Revenue and Return Rate]
+7. [Payment Failure Rate with Top Reasons]
+8. [Delivery SLA Breach by Carrier × Shipping Method]
+9. [Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel]
 
 ## What's in this repo
 ...
