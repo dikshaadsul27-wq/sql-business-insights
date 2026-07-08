@@ -55,7 +55,7 @@ This repository documents an e‑commerce analytics case study with SQL queries,
 - Row counts.md — dataset size checks.
 - ecom_schema.md — schema reconnaissance and table relationships.
 
-# queries/  
+## queries/  
 SQL scripts answering 10 core business questions:
 - 01_daily_business_summary.sql — daily KPIs (revenue, orders).
 - 02_monthly_cohort_retention.sql — retention by signup cohort.
@@ -68,16 +68,19 @@ SQL scripts answering 10 core business questions:
 - 09_repeat_purchase_interval.sql — time between repeat purchases.
 - 10_attribution_comparison.sql — first‑touch vs. last‑touch attribution.
 
-##screenshots/  
+## screenshots/  
 Visual outputs of the SQL analyses:
 
 Cohort retention charts, funnel conversion, attribution comparison, category health, SLA breach, payment failure reasons, and revenue trends.
 
-##INTERPRETATIONS.md## — narrative business interpretations of query outputs.
+## INTERPRETATIONS.md
+Narrative business interpretations of query outputs.
 
-##case_study.md## — consolidated case study write‑up.
+## case_study.md
+Consolidated case study write‑up.
 
-##README.md## — repository documentation (this file).
+## README.md
+Repository documentation (this file).
 
 ## How to run
 ...
