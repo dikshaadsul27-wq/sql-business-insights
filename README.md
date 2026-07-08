@@ -46,7 +46,38 @@ The dashboard consists of below metrics
 9. [Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel] : [screenshots/Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/dab211e2a563c7bddadb371fdccdad9fca501fc4/screenshots/Attribution%20Comparison-FirstTouch%20vs%20LastTouch%20Revenue%20by%20Channel.png)
 
 ## What's in this repo
-...
+This repository documents an e‑commerce analytics case study with SQL queries, schema notes, interpretations, and visual outputs. It is organized as follows:
+
+*notes/  
+-Supporting documentation and schema exploration:
+-Distinct Value Distribution.md — profiling distinct values across key fields.
+-Inventory.md — product inventory notes.
+-Row counts.md — dataset size checks.
+-ecom_schema.md — schema reconnaissance and table relationships.
+
+*queries/  
+SQL scripts answering 10 core business questions:
+-01_daily_business_summary.sql — daily KPIs (revenue, orders).
+-02_monthly_cohort_retention.sql — retention by signup cohort.
+-03_funnel_conversion.sql — conversion rates by acquisition channel.
+-04_top_products_by_net_revenue.sql — product profitability after refunds.
+-05_category_health.sql — category‑level purchases vs. returns.
+-06_payment_failure_analysis.sql — payment failure reasons and rates.
+-07_delivery_sla_breach.sql — shipping delays by carrier/method.
+-08_customerltv_bucketshare_revenue.sql — revenue share by LTV buckets.
+-09_repeat_purchase_interval.sql — time between repeat purchases.
+-10_attribution_comparison.sql — first‑touch vs. last‑touch attribution.
+
+*screenshots/  
+Visual outputs of the SQL analyses:
+
+Cohort retention charts, funnel conversion, attribution comparison, category health, SLA breach, payment failure reasons, and revenue trends.
+
+*INTERPRETATIONS.md — narrative business interpretations of query outputs.
+
+*case_study.md — consolidated case study write‑up.
+
+*README.md — repository documentation (this file).
 
 ## How to run
 ...
