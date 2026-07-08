@@ -1,5 +1,5 @@
 -- Q8 — Customer LTV + Bucket Share of Revenue
--- Owner: Diksha Adsul |  Last updated: 2026-06-25
+-- Owner: Diksha Adsul |  Last updated: 2026-07-08
 -- Sanity checks: Total revenue of all customers = sum(total) of all orders excluding 'cancelled' = 282,859,232.18
 -- ltv_bucket_share_of_revenue summed across distinct buckets equals 0.994
 
@@ -12,7 +12,7 @@ with customer_spend as (
       , sum(o.total) as total_revenue
       , sum(o.total)::float / nullif(count(distinct o.order_id), 0) as aov
     from ecom.orders o
-    where o.status <> 'cancelled'
+    where lower(o.status) <> 'cancelled'
     group by o.customer_id
 )
 
