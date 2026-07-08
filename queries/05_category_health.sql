@@ -1,8 +1,8 @@
 -- Q5 — Category Health: Purchases → Returns
--- Owner: Diksha Adsul |  Last updated: 2026-06-20
+-- Owner: Diksha Adsul |  Last updated: 2026-07-08
 -- Sanity checks: Return rate % is between 0 to 100.
 -- Returns are less than orders with the category.
--- sum(line_total) paid = sum of revenue for each category = 24,381,138
+-- sum(line_total) paid = sum of revenue for each category = 239,583,750
 
 with category_sales as (
     select
@@ -15,7 +15,7 @@ with category_sales as (
     join ecom.products p on pv.product_id = p.product_id
     join ecom.categories c on p.category_id = c.category_id
     join ecom.orders o on oi.order_id = o.order_id
-    where o.status = 'paid'   -- only paid orders
+    where o.payment_status = 'paid' and lower(o.status) <> 'cancelled'   -- only paid orders
     group by c.category_name
 )
 
