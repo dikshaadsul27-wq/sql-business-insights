@@ -101,3 +101,10 @@ cd <sql-business-insights>
 5. Case study narrative
 - Read case_study.md for a consolidated walkthrough of the analysis and insights.
 
+## Reflection
+
+Overall, the business appears healthy, though a few areas warrant closer attention. The current dataset provides a useful snapshot of one quarter, but a full year of data would be essential before committing to significant investments. Annual data would reveal seasonality patterns and offer deeper insights into customer retention.
+
+Return rates are relatively low, yet analyzing refunds at the product level rather than the order level could uncover more actionable insights. While the COD payment option shows a low failure rate, the error reason is consistently tagged as “payment failed”—a likely misclassification that raises concerns about data integrity.
+
+Importantly, internal performance alone cannot define success. To ensure sustainable growth, the business should be benchmarked against market-level information, enabling a clearer view of competitive positioning and opportunities for growth.
