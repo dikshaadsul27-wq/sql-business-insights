@@ -3,6 +3,17 @@
 
 This repository is an e‑commerce analytics case study built with SQL queries, schema documentation, and business interpretations. It explores how raw transactional data can be transformed into actionable insights for leadership — covering daily KPIs, customer retention, funnel conversion, product profitability, category health, payment failures, delivery SLA breaches, customer lifetime value, repeat purchase intervals, and marketing attribution.
 
+## Key Findings
+
+- Electronics Dominate: Smartwatches, Headphones, and Speakers drive the majority of net revenue (Q4 & Q5). Return rates are healthy (~2.5–3.1%).
+- Revenue Volatility but Recovering: Big daily swings, but recent days show positive DoD/WoW growth. Strong AOV and low cancellations.
+- Fast Repeat Behavior: Among repeat buyers, median time to next order is only ~6 days. Good early retention but high first-purchase drop-off.
+- Consistent Funnels: All channels (Organic, Paid, etc.) have similar conversion rates (~28% session-to-purchase). Organic + Paid lead revenue.
+- Operational Friction: UPI has highest payment failures (~5.5%). EcomExpress shows more late deliveries than other carriers.
+- High Customer Concentration: Small group of high-LTV users drives outsized revenue.
+
+Bottom Line: Strong electronics core, loyal power users, solid foundations — with clear opportunities in retention, payments, and delivery.
+
 ## Schema (ER Diagram)
 
 [ecom_schema.md](https://github.com/dikshaadsul27-wq/ecom-analytics/blob/main/notes/ecom_schema.md)
