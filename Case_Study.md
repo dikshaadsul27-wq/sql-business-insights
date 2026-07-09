@@ -45,9 +45,9 @@ Overall session-to-purchase ~28%
 
 **5. Operational Friction Points Exist but Are Fixable**
 
-Payments : UPI has the highest failure rate (~5.5%), often due to gateway timeouts. Card and others are better but still see fraud/bank declines. Reducing friction here could lift conversions.
-Delivery: EcomExpress shows higher late rates (10-21%) vs. Bluedart/Delhivery (3-10%). Standard shipping is more reliable than express/same-day in some cases. Average delivery is 3-4 days, which is decent.
-High-value customers are extremely concentrated: a small number of power users (20000+ LTV bucket) drive a huge share of revenue.
+[Payment Failures](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/a67db671561c586d526430ffbf8d5d0faeacdaab/queries/06_payment_failure_analysis.sql) : UPI has the highest failure rate (~5.5%), often due to gateway timeouts. Card and others are better but still see fraud/bank declines. Reducing friction here could lift conversions.
+[Delivery breaches](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/a67db671561c586d526430ffbf8d5d0faeacdaab/queries/07_delivery_sla_breach.sql): EcomExpress shows higher late rates (10-21%) vs. Bluedart/Delhivery (3-10%). Standard shipping is more reliable than express/same-day in some cases. Average delivery is 3-4 days, which is decent.
+High-value customers are extremely concentrated: a small number of power users ([20000+ LTV bucket](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/a67db671561c586d526430ffbf8d5d0faeacdaab/queries/08_customerltv_bucketshare_revenue.sql)) drive a huge share of revenue.
 
 **Takeaway:** Tighten payment error handling (especially UPI) and carrier SLAs. Double down on delighting high-LTV customers with VIP treatment, exclusive drops, or loyalty perks.
 Overall Picture & Recommendations
@@ -55,7 +55,7 @@ This business is in a strong position: electronics-led revenue with healthy unit
 
 **Priority Actions:**
 Product Strategy:Build the electronics flywheel — expand winners, prune high-return SKUs.
-Retention Engine: Turn one-time buyers into the high-frequency repeaters we already see in the data (median 8 days between repeats).
+Retention Engine: Turn one-time buyers into the high-frequency repeaters we already see in the data.
 Operations: Fix payment failures and delivery reliability to protect conversion and satisfaction.
 Growth: Lean into Organic + Referral while optimizing Paid efficiency.
 Analytics: Run these (or similar) queries monthly as a dashboard — they give us a repeatable health check.
