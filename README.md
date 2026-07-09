@@ -12,7 +12,7 @@ This repository is an e‑commerce analytics case study built with SQL queries, 
 - Operational Friction: UPI has highest payment failures (~5.5%). EcomExpress shows more late deliveries than other carriers.
 - High Customer Concentration: Small group of high-LTV users drives outsized revenue.
 
-Bottom Line: Strong electronics core, loyal power users, solid foundations — with clear opportunities in retention, payments, and delivery.
+Bottom Line: Strong electronics core, loyal power users, solid foundations with clear opportunities in retention, payments, and delivery.
 
 ## Schema (ER Diagram)
 
