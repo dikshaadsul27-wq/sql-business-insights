@@ -7,7 +7,7 @@ This repository is an e‑commerce analytics case study built with SQL queries, 
 
 - Electronics Dominate: Smartwatches, Headphones, and Speakers drive the majority of net revenue. Return rates are healthy (~2.5–3.1%).
 - Revenue Volatility but Recovering: Big daily swings, but recent days show positive DoD/WoW growth. Strong AOV and low cancellations.
-- Fast Repeat Behavior: Among repeat buyers, median time to next order is only ~6 days. Good early retention but high first-purchase drop-off.
+- Fast Repeat Behavior: Among repeat buyers, average time to next order is only ~6 days. Good early retention but high first-purchase drop-off.
 - Consistent Funnels: All channels (Organic, Paid, etc.) have similar conversion rates (~28% session-to-purchase). Organic + Paid lead revenue.
 - Operational Friction: UPI has highest payment failures (~5.5%). EcomExpress shows more late deliveries than other carriers.
 - High Customer Concentration: Small group of high-LTV users drives outsized revenue.
