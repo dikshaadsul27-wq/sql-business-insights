@@ -39,7 +39,7 @@ erDiagram
 ```
 
 ## Dashboard
-Dashboard link : [Business Dashboard](https://metabase.topfolio.in/dashboard/42-task-1-sql-foundation)
+Dashboard link : [Business Dashboard](https://metabase.topfolio.in/public/dashboard/582a321e-3f45-4889-b50a-d654258c9af8)
 
 The dashboard consists of below metrics
 1. Revenue by Order Date : [screenshots/Revenue by Order Date.png](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/c1db18714f003f7080d13df01abdb33657575437/screenshots/Revenue%20by%20Order%20Date.png)
