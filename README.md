@@ -1,5 +1,5 @@
 # SQL Business Insights — Task 1 (ecom)
-[Case Study](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/ece449fffa8136402828acd828a6edaab904b890/case_study.md) · [LinkedIn](https://www.linkedin.com/in/diksha-adsul-2607ba90/)
+[Case Study](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/db8054a81377a75d7011752153b2ce6e9f6faf64/Case_Study.md)· [LinkedIn](https://www.linkedin.com/in/diksha-adsul-2607ba90/)
 
 This repository is an e‑commerce analytics case study built with SQL queries, schema documentation, and business interpretations. It explores how raw transactional data can be transformed into actionable insights for leadership — covering daily KPIs, customer retention, funnel conversion, product profitability, category health, payment failures, delivery SLA breaches, customer lifetime value, repeat purchase intervals, and marketing attribution.
 
