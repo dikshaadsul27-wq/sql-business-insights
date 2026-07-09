@@ -1,5 +1,5 @@
 -- Q9 .1— Repeat Purchase Interval (Row Level)
--- Owner: Diksha Adsul |  Last updated: 2026-07-01
+-- Owner: Diksha Adsul |  Last updated: 2026-07-09
 -- Sanity checks: days_to_next_order >= 0 on every row.
 
 with intervals as (
@@ -19,7 +19,7 @@ with intervals as (
             ) - o.created_at
         ) as days_to_next_order
     from ecom.orders o
-    where lower(o.status) = 'paid'
+    where o.payment_status = 'paid'
 )
 
 select
