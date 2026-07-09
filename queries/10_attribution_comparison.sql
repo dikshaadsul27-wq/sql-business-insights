@@ -1,5 +1,5 @@
 -- Q10 — Attribution Comparison: First-Touch vs Last-Touch Revenue by Channel
--- Owner: Diksha Adsul |  Last updated: 2026-07-08
+-- Owner: Diksha Adsul |  Last updated: 2026-07-09
 -- Sanity checks: Total revenue under first_touch = total under last_touch = total non-cancelled revenue in ecom.orders = 282,859,232.18
 
 with first_touch as (
@@ -50,7 +50,7 @@ with first_touch as (
     left join last_touch lt
         on o.customer_id = lt.customer_id
        and lt.rn = 1
-    where o.status <> 'cancelled'
+    where lower(o.status) <> 'cancelled'
     group by coalesce(lt.channel, 'direct')
 )
 
