@@ -27,7 +27,7 @@ Order volume and AOV are healthy (often ₹7K+ AOV), with paid order rates consi
 
 **3. Strong Early Retention with Rapid Drop-Off — Room to Build Loyalty**
 [Cohort data](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/3a33ed09b166ab7bdfaf46535b4620b0f0372e39/queries/02_monthly_cohort_retention.sql) shows decent Month 1 retention (e.g., ~50% for the oldest cohort, 42% and 18% for more recent ones). By Month 2-3, retention falls sharply (e.g., 19% M3 for the earliest cohort).
-This is typical for e-commerce but highlights an opportunity. Among [repeat buyers](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/3a33ed09b166ab7bdfaf46535b4620b0f0372e39/queries/09_repeat_purchase_interval.sql), the median time to next order is only ~6 days (p90 ~19 days) — remarkably quick. This highlights a core of highly engaged, habitual customers.
+This is typical for e-commerce but highlights an opportunity. Among [repeat buyers](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/3a33ed09b166ab7bdfaf46535b4620b0f0372e39/queries/09_repeat_purchase_interval.sql), the average time to next order is only ~6 days (p90 ~19 days) — remarkably quick. This highlights a core of highly engaged, habitual customers.
 
 **Takeaway:** Our acquisition is working, but post-purchase experience needs work. We should invest in onboarding sequences, loyalty programs, and repeat-purchase incentives. Repeat purchase intervals reinforces that among repeat buyers, the median time to next order is only 1 day, with p90 at 19 days, a core group of engaged customers exists and buys frequently when hooked.
 
