@@ -1,5 +1,6 @@
 
 Subject: What 10 SQL Queries Told Me About This Business
+
 Date: July 2026
 
 Dear Founder,
@@ -7,15 +8,15 @@ I’ve spent time digging into our e-commerce data with 10 targeted SQL queries.
 Here are the five most important insights I surfaced, backed directly by the data:
 
 **1. Electronics Dominate True Profitability**
-Our highest-net-revenue products are overwhelmingly Headphones, Smartwatches, and Speakers. Top items like Eastlight Clarity ANC Headphones (₹918K net), Marigold Lite Wireless Earbuds, and Tarang Active Smartwatch show strong gross revenue with low-to-moderate returns.
+[Top products by net revenue after refunds](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/ff2082803d582fa678f7c4b035b40b2d11e0b466/queries/04_top_products_by_net_revenue.sql) are overwhelmingly Headphones, Smartwatches, and Speakers. Top items like Eastlight Clarity ANC Headphones (₹918K net), Marigold Lite Wireless Earbuds, and Tarang Active Smartwatch show strong gross revenue with low-to-moderate returns.
 Category breakdown (net revenue):
 
-Smartwatch: ~₹62.7M
-Headphones: ~₹39.8M
-Speakers: ~₹34.5M
+Smartwatch: ~₹59.7M
+Headphones: ~₹38.1M
+Speakers: ~₹32.9M
 
-These three categories alone drive the bulk of profit. Apparel (Jackets, Shoes) and lifestyle categories contribute meaningfully but trail significantly, with higher return rates in some cases (Category Health shows return rates of 24-29% across categories, with Kitchen and Shoes on the higher end).
-**Takeaway:** We have a clear “hero category” engine. We should lean harder into premium audio/wearables, more SKUs, better bundling, and supplier negotiations while ruthlessly reviewing underperforming non-electronics items that drag on net margin due to returns.
+These three categories alone drive the bulk of profit. [Category-level health](https://github.com/dikshaadsul27-wq/sql-business-insights/blob/ff2082803d582fa678f7c4b035b40b2d11e0b466/queries/05_category_health.sql) confirms that Smartwatches lead in volume and revenue, followed strongly by Headphones and Speakers, with return rates low across the board (~2.5–3.1%).
+**Takeaway:** We have a clear hero category. Prioritize expansion here (new variants, bundles, marketing) while optimizing higher-return non-electronics lines.
 
 **2. Revenue Volatility Is High, But Recent Trends Show Resilience (Q1 Daily Business Summary)**
 Daily revenue fluctuates significantly (e.g., peaks above ₹7M, dips below ₹2M), with notable day-over-day and week-over-week swings. However, the most recent days show recovery: several days with positive revenue vs. yesterday and same-weekday WoW growth in the 20-60% range on strong days.
